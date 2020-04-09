@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="index.js"></script>
+    <!--
+      First screen: Pick a topic.
+      Marriage, Birth, Death, Religion....?
+
+      In the script, each topic has an array containing the order of inputs:
+        Marriage["adjective","noun", "adjective", "noun", "verb"]
+        This populates the form by added one input box + corresponding label.
+
+      OnClick Submit:
+         Display (a new page?) with corresponding topic story w/ User input
+         displayed within...
+         Or do that all within the script. create the new text w/input then render
+         that in view.
+    -->
+  </head>
+  <body onload="showForm();">
+    <div class="card card-form text-center">
+      <div class="card-body">
+        <form id="marriage_form">
+          <div id="form"></div>
+          <button class="btn btn-primary" style="text-align: center;" >Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
