@@ -3,16 +3,20 @@ const funeral = [];
 const church = [];
 
 
-function madlib(){
+function marriage_madlib(){
   populateMarriage();
-  window.location.href = "file:///Users/selena/Desktop/2019Projects/madlibs/marriage_form.html";
-  //window.onload = showForm();
-  //showForm();
-}
-function showForm(){
   for ( var i=0; i < marriage.length; i++){
-    console.log("0000000000");
-    //console.log("");
+    showForm(marriage[i], i);
+  }
+  var title = document.getElementById("title");
+  title.innerHTML = "Marriage Advice";
+  addSubmitButton();
+  var submit = document.getElementById("submit_button");
+  submit.onclick = showMarriageMadlib();
+
+}
+
+function showForm(word_type, id_num){
     //form input label
     var newDivForm = document.createElement("div");
     newDivForm.classList.add("form-group");
@@ -20,20 +24,19 @@ function showForm(){
     var space = newDivForm.style.marginRight;
     space = "10px";
 
-    var newContent = document.createTextNode(marriage[i] + "  ");
+
+    var newContent = document.createTextNode(word_type + "  ");
     newDivForm.appendChild(newContent);
 
     var inputForm = document.createElement("input");
+    inputForm.setAttribute("id", id_num);
     newDivForm.appendChild(inputForm);
 
-    var currentDiv = document.getElementById("form");
-    //var parentDiv = document.getElementById("marriage_form");
-    //parentDiv.insertBefore(newDivForm, currentDiv);
-    console.log("0000000000");
-    document.body.insertBefore(newDivForm, currentDiv);
-    console.log("0000000000");
 
-  }
+    var currentDiv = document.getElementById("form");
+    var parentDiv = document.getElementById("madlibs-card");
+    parentDiv.insertBefore(newDivForm, currentDiv);
+    //document.body.insertBefore(newDivForm, currentDiv)
 }
 function populateMarriage(){
   marriage.push("Adjective");
@@ -46,4 +49,25 @@ function populateFuneral(){
 }
 function populateChurch(){
 
+}
+function hideButtons(){
+  document.getElementById("marriage_button").style.visibility = "hidden";
+  document.getElementById("funeral_button").style.visibility = "hidden";
+  document.getElementById("church_button").style.visibility = "hidden";
+}
+function addSubmitButton(){
+  var button = document.createElement("button");
+  button.innerHTML = "Submit";
+  button.classList.add("btn");
+  button.classList.add("btn-primary");
+  button.setAttribute("id", "submit_button");
+  var body = document.getElementById("madlibs-card");
+  body.appendChild(button);
+}
+
+function showMarriageMadlib() {
+  var madlib = "<p>When I heard you were getting married, I immediadtly thought"+ document.getElementById("0").value
+    + "! You are going to be the most" + document.getElementById("1").value + "bride ever! Before the big day, be sure to"
+    + document.getElementById("1").value;
+  $('#output').append(madlib);
 }

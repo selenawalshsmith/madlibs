@@ -4,15 +4,25 @@
     <meta charset="UTF-8"/>
     <link href="css/bootstrap.css" rel="stylesheet">
     <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   </head>
-  <body>
-    <div class="card-body">
-      <h1>Pick a Madlibs Topic</h1>
-      <a>
-        <button class="btn btn-primary" style="text-align: center;" onClick="madlib()">Marriage</button>
-      </a>
-        <button class="btn btn-primary" style="text-align: center;">Funeral</button>
-        <button class="btn btn-primary" style="text-align: center;" >Church</button>
+  <body style="display: flex; align-items:center; justify-content: center;">
+    <br>
+    <br>
+    <div class="card" style="width: 800px; display: flex; align-items:center; justify-content: center; margin-top: 25px;">
+        <div class="card-title" style="margin-top: 15px;">
+          <h1 id="title">Pick a Madlibs Topic</h1>
+        </div>
+        <div class="card-body" id="madlibs-card">
+        <a>
+          <button class="btn btn-primary" id="marriage_button" onClick="marriage_madlib(); hideButtons();">Marriage</button>
+        </a>
+          <button class="btn btn-primary" id="funeral_button" style="text-align: center;">Funeral</button>
+          <button class="btn btn-primary" id="church_button" style="text-align: center;" >Church</button>
+          <br>
+          <br>
+          <div id = "output"><div>
+      </div>
     </div>
   </body>
 </html>

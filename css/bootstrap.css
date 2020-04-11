@@ -65,6 +65,14 @@ CUSTOM CUSTOM CUSTOM
   width: 75px !important;
 }
 
+.card {
+   width: 800px !important;
+   display: flex !important;
+   align-items:center !important;
+   justify-content: center !important;
+   margin-top: 25px !important;
+}
+
 
 /*
 END CUSTOM End CUSTOM END CUSTOM
