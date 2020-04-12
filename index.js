@@ -1,8 +1,18 @@
 const marriage = [];
 const dating = [];
-const church = [];
+const toast = [];
 var topic;
-
+function toast_madlib(){
+  topic = "toast";
+  hideButtons();
+  populateToast();
+  for ( var i=0; i < toast.length; i++){
+    showForm(toast[i], i);
+  }
+  var title = document.getElementById("title");
+  title.innerHTML = "Wedding Toast";
+  addSubmitButton();
+}
 function dating_madlib(){
   topic ="dating";
   hideButtons();
@@ -76,19 +86,34 @@ function populateDating(){
     dating.push("Adjective");
     dating.push("Verb");
 }
-function populateChurch(){
-
+function populateToast(){
+  toast.push("Name");
+  toast.push("Number");
+  toast.push("Past Tense Verb");
+  toast.push("Place");
+  toast.push("Adjective");
+  toast.push("Adjective");
+  toast.push("Noun");
+  toast.push("Noun");
+  toast.push("Verb");
+  toast.push("Verb");
+  toast.push("Verb");
+  toast.push("Noun");
+  toast.push("Verb");
+  toast.push("Verb");
+  toast.push("Adjective");
+  toast.push("Plural Noun");
 }
 //only called in index.html
 function hideButtons(){
   var marriage_b = document.getElementById("marriage_button");
   var funeral_b = document.getElementById("funeral_button");
-  var church_b= document.getElementById("church_button");
+  var toast_b= document.getElementById("toast_button");
 
   var body = document.getElementById("madlibs-cardbody");
   body.removeChild(marriage_b);
   body.removeChild(funeral_b);
-  body.removeChild(church_b);
+  body.removeChild(toast_b);
 }
 
 function hideForm(){
@@ -107,6 +132,7 @@ function addSubmitButton(){
   button.setAttribute("id", "submit_button");
   if (topic == "marriage"){ button.setAttribute("onclick", "showMarriageMadlib();");}
   if (topic == "dating"){ button.setAttribute("onclick", "showDatingMadlib();");}
+  if (topic == "toast"){ button.setAttribute("onclick", "showToastMadlib();");}
 
 
   var body = document.getElementById("form");
@@ -141,7 +167,26 @@ function showMarriageMadlib() {
     + "! You are going to be the most " + document.getElementById("1").value + " bride ever! Before the big day, be sure to "
     + document.getElementById("2").value + " your " + document.getElementById("3").value + " and " + document.getElementById("4").value + " your "
     + document.getElementById("5").value +".");
-    madlib.appendChild(paragraph);
+  madlib.appendChild(paragraph);
+
+  var body = document.getElementById("madlibs-card");
+  body.appendChild(madlib);
+  hideForm();
+}
+function showToastMadlib() {
+  var madlib = document.createElement("p");
+  var paragraph = document.createTextNode("My name is " + document.getElementById("0").value + " and I've known the couple for "
+      + document.getElementById("1").value + " years. I " + document.getElementById("2").value + " all the way from "
+      + document.getElementById("3").value + " to celebrate this day. I am so " + document.getElementById("4").value
+      + " that Chad and Karen are tying the knot! They have to be the most " + document.getElementById("5").value
+      + " " + document.getElementById("6").value + " and I wish them " + document.getElementById("7").value
+      + " for many years to come. \n My best advice? Don't forget to " + document.getElementById("8").value
+      + " before you " + document.getElementById("9").value + " and " + document.getElementById("10").value
+      + " after the " + document.getElementById("11").value + ". Chad, you should always " +
+      + document.getElementById("12").value + ", and Karen, you should always "
+      + document.getElementById("13").value + ". I wish you a lifetime of health, happiness and "
+      + document.getElementById("14").value + " " + document.getElementById("15").value);
+  madlib.appendChild(paragraph);
 
   var body = document.getElementById("madlibs-card");
   body.appendChild(madlib);
