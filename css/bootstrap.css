@@ -60,14 +60,14 @@ CUSTOM CUSTOM CUSTOM
 .card {
    width: 600px !important;
   /* display: flex !important; */
-   min-height: 750px !important;
+   min-height: 700px !important;
    margin-top: 25px !important;
    background-color: #DBF3FA !important;
 }
 
 
-#title {
-  font-weight: bold;
+.title {
+  font-weight: bold !important;
 }
  body {
    font-family: 'Roboto Mono', monospace !important;
@@ -77,6 +77,15 @@ CUSTOM CUSTOM CUSTOM
    box-shadow: none !important;
    color: #FFFFFF !important;
    width: 200px !important;
+ }
+ .wedding-cake {
+   max-width: 30% !important;
+   min-width: 30% !important;
+   height: auto !important;
+   top: -550px !important;
+   left: 600px !important;
+   position: absolute !important;
+   z-index: 10 !important;
  }
 /*
 END CUSTOM End CUSTOM END CUSTOM
@@ -239,7 +248,7 @@ figure {
 
 img {
   vertical-align: middle;
-  border-style: double;
+
 }
 
 svg {
