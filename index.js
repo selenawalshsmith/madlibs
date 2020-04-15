@@ -119,7 +119,8 @@ function hideButtons(){
 function hideForm(){
   //document.getElementById("form").style.visibility = "hidden";
   var form = document.getElementById("form");
-  var body = document.getElementById("madlibs-cardbody");
+  //var body = document.getElementById("madlibs-cardbody");
+  var body = document.getElementById("form-parent");
   body.removeChild(form);
 
 }
@@ -128,7 +129,8 @@ function addSubmitButton(){
   var button = document.createElement("button");
   button.innerHTML = "Submit";
   button.classList.add("btn");
-  button.classList.add("btn-primary");
+  button.classList.add("shadow-none");
+  button.style.marginTop = "40px";
   button.setAttribute("id", "submit_button");
   if (topic == "marriage"){ button.setAttribute("onclick", "showMarriageMadlib();");}
   if (topic == "dating"){ button.setAttribute("onclick", "showDatingMadlib();");}

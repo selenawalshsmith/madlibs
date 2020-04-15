@@ -52,28 +52,32 @@ html {
 /*
 CUSTOM CUSTOM CUSTOM
 */
-.card-form {
-  width: 800px !important;
-  height: 700px !important;
-  margin: 0 auto !important; /* Added */
-  float: none !important; /* Added */
-  margin-bottom: 10px !important;
-  margin-top: 50px !important; /* Added */
-}
 
 .btn-submit {
   width: 75px !important;
 }
 
 .card {
-   width: 800px !important;
-   display: flex !important;
-   align-items:center !important;
-   justify-content: center !important;
+   width: 600px !important;
+  /* display: flex !important; */
+   min-height: 750px !important;
    margin-top: 25px !important;
+   background-color: #DBF3FA !important;
 }
 
 
+#title {
+  font-weight: bold;
+}
+ body {
+   font-family: 'Roboto Mono', monospace !important;
+ }
+ button {
+   background-color: #B76E79 !important;
+   box-shadow: none !important;
+   color: #FFFFFF !important;
+   width: 200px !important;
+ }
 /*
 END CUSTOM End CUSTOM END CUSTOM
 */

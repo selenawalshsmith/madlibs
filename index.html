@@ -3,27 +3,36 @@
   <head>
     <meta charset="UTF-8"/>
     <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <script src="index.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   </head>
-  <body style="display: flex; align-items:center; justify-content: center;">
-    <br>
-    <br>
-    <div class="card" style="width: 800px; display: flex; align-items:center; justify-content: center; margin-top: 25px;" id="madlibs-form">
-        <div class="card-title" style="margin-top: 15px;">
-          <h1 id="title">Pick a Madlibs Topic</h1>
+  <body>
+    <div class="card mt-4 ml-4 mb-4"  id="madlibs-form">
+      <h1 class="card-title mt-4 ml-4 float-left" id="title">
+        Valentines Day Madlibs.
+      </h1>
+      <h3 class="ml-4 float-left">
+        Pick a topic.
+      </h3>
+      <div class="card-body" id="madlibs-card">
+        <div class="container">
+          <div class="row float-left" id="form-parent">
+            <div class="col-lg-3">
+              <div id="madlibs-cardbody">
+              <br>
+              <div id="output"></div>
+              <button class="btn shadow-none mb-4" id="marriage_button" onClick="marriage_madlib();">Marriage</button>
+              <button class="btn shadow-none mb-4" id="funeral_button" style="text-align: center;" onClick="dating_madlib();">Dating</button>
+              <button class="btn shadow-none mb-4" id="toast_button" style="text-align: center;" onClick="toast_madlib();">Wedding Toast</button>
+              <br>
+              <br>
+            </div>
+          </div>
+          <div id = "form"></div>
         </div>
-        <div class="card-body" id="madlibs-card">
-          <div id="madlibs-cardbody">
-            <div id="output"></div>
-          <button class="btn btn-primary" id="marriage_button" onClick="marriage_madlib();">Marriage</button>
-          <button class="btn btn-primary" id="funeral_button" style="text-align: center;" onClick="dating_madlib();">Dating</button>
-          <button class="btn btn-primary" id="toast_button" style="text-align: center;" onClick="toast_madlib();">Wedding Toast</button>
-          <br>
-          <br>
-            <div id = "form" style="align-items:center; justify-content: center;"><div>
-        </div>
-      </div>
+       </div>
+     </div>
     </div>
   </body>
 </html>
