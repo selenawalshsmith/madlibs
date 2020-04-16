@@ -45,6 +45,7 @@ function showForm(word_type, id_num){
     //style the label
     var space = newDivForm.style.marginRight;
     space = "10px";
+    //newDivForm.style.cssFloat = "left";
 
 
     var newContent = document.createTextNode(word_type + "  ");
@@ -55,7 +56,8 @@ function showForm(word_type, id_num){
     newDivForm.appendChild(inputForm);
 
 
-    var body = document.getElementById("form");
+    //var body = document.getElementById("form");
+    var body = document.getElementById("madlibs-cardbody");
     body.appendChild(newDivForm);
 }
 
@@ -63,9 +65,9 @@ function populateMarriage(){
   marriage.push("Exclamation");
   marriage.push("Adjective");
   marriage.push("Verb");
-  marriage.push("Noun/Plural Noun");
+  marriage.push("Plural Noun");
   marriage.push("Verb");
-  marriage.push("Noun/Plural Noun");
+  marriage.push("Plural Noun");
 }
 function populateDating(){
     dating.push("Plural Noun");
@@ -81,7 +83,7 @@ function populateDating(){
     dating.push("Body Part");
     dating.push("Noun");
     dating.push("Noun");
-    dating.push("Verb Ending in ing");
+    dating.push("Verb");
     dating.push("Adjective");
     dating.push("Adjective");
     dating.push("Verb");
@@ -137,7 +139,7 @@ function addSubmitButton(){
   if (topic == "toast"){ button.setAttribute("onclick", "showToastMadlib();");}
 
 
-  var body = document.getElementById("form");
+  var body = document.getElementById("madlibs-cardbody");
   body.appendChild(button);
 }
 
